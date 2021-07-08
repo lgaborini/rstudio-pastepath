@@ -8,9 +8,9 @@
 #' @inheritParams retrieve_path
 #' @rdname paste_path
 #' @examples
-#'
-#' paste_path()
-#'
+#' \dontrun{
+#'   paste_path()
+#' }
 paste_path <- function(wrap_quotes = TRUE) {
 
    path_clip <- retrieve_path(wrap_quotes = wrap_quotes)
@@ -27,8 +27,8 @@ paste_path <- function(wrap_quotes = TRUE) {
    NULL
 }
 
-#' Paste without quotes
-#' @describeIn paste_path
+#' @describeIn paste_path Paste without wrapping in quotes
+#' @inheritDotParams paste_path
 paste_path_without_quotes <- function(...) {
    paste_path(wrap_quotes = FALSE)
 }
@@ -45,14 +45,14 @@ paste_path_without_quotes <- function(...) {
 #' @return a character vector or NULL
 #' @export
 #' @importFrom clipr read_clip
-#' @importFrom utils readClipboard
 retrieve_path <- function(wrap_quotes = TRUE) {
 
-   if(.Platform$OS.type != "windows") {
-      x <- clipr::read_clip()
-   } else {
-      x <- utils::readClipboard()
-   }
+   # if(.Platform$OS.type != "windows") {
+   #    x <- clipr::read_clip()
+   # } else {
+   #    x <- utils::readClipboard()
+   # }
+   x <- clipr::read_clip()
 
    if (is.null(x)) {
       return(NULL)

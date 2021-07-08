@@ -2,12 +2,21 @@
 % Please edit documentation in R/paste_path.R
 \name{paste_path}
 \alias{paste_path}
+\alias{paste_path_without_quotes}
 \title{Paste a path in the current cursor position.}
 \usage{
 paste_path(wrap_quotes = TRUE)
+
+paste_path_without_quotes(...)
 }
 \arguments{
 \item{wrap_quotes}{if TRUE, wrap in double quotes (character vector) if necessary}
+
+\item{...}{
+  Arguments passed on to \code{\link[=paste_path]{paste_path}}
+  \describe{
+    \item{\code{}}{}
+  }}
 }
 \value{
 nothing
@@ -15,8 +24,13 @@ nothing
 \description{
 All backslashes are converted to slashes, and the path is quoted if necessary.
 }
+\section{Functions}{
+\itemize{
+\item \code{paste_path_without_quotes}: Paste without wrapping in quotes
+}}
+
 \examples{
-
-paste_path()
-
+\dontrun{
+  paste_path()
+}
 }
