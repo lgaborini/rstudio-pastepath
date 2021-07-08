@@ -1,17 +1,19 @@
 #' Paste a path in the current cursor position.
-#' Paste a path in the current cursor position.
+#'
 #' All backslashes are converted to slashes, and the path is quoted if necessary.
 #'
 #' @return nothing
 #' @export
 #' @importFrom rstudioapi insertText
+#' @inheritParams retrieve_path
+#' @rdname paste_path
 #' @examples
 #'
 #' paste_path()
 #'
-paste_path <- function() {
+paste_path <- function(wrap_quotes = TRUE) {
 
-   path_clip <- retrieve_path()
+   path_clip <- retrieve_path(wrap_quotes = wrap_quotes)
 
    if (is.null(path_clip)) {
       return(NULL)
@@ -25,6 +27,11 @@ paste_path <- function() {
    NULL
 }
 
+#' Paste without quotes
+#' @describeIn paste_path
+paste_path_without_quotes <- function(...) {
+   paste_path(wrap_quotes = FALSE)
+}
 
 
 
@@ -32,7 +39,9 @@ paste_path <- function() {
 
 #' Retrieve and escape a path from the clipboard
 #'
-#' @param wrap_quotes if TRUE, wrap in a character vector if not necessary
+#' #' All backslashes are converted to slashes, and the path is quoted if necessary.
+#'
+#' @param wrap_quotes if TRUE, wrap in double quotes (character vector) if necessary
 #' @return a character vector or NULL
 #' @export
 #' @importFrom clipr read_clip

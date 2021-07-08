@@ -1,5 +1,10 @@
-Name: Paste path
-Description: Paste a path as a character vector
+Name: Paste path as character vector
+Description: Paste a path adding quotes
 Binding: paste_path
+Interactive: false
+
+Name: Paste path without quotes
+Description: Paste a path without adding quotes
+Binding: paste_path_without_quotes
 Interactive: false
 

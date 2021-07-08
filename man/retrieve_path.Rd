@@ -7,11 +7,11 @@
 retrieve_path(wrap_quotes = TRUE)
 }
 \arguments{
-\item{wrap_quotes}{if TRUE, wrap in a character vector if not necessary}
+\item{wrap_quotes}{if TRUE, wrap in double quotes (character vector) if necessary}
 }
 \value{
 a character vector or NULL
 }
 \description{
-Retrieve and escape a path from the clipboard
+#' All backslashes are converted to slashes, and the path is quoted if necessary.
 }

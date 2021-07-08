@@ -2,18 +2,17 @@
 % Please edit documentation in R/paste_path.R
 \name{paste_path}
 \alias{paste_path}
-\title{Paste a path in the current cursor position.
-Paste a path in the current cursor position.
-All backslashes are converted to slashes, and the path is quoted if necessary.}
+\title{Paste a path in the current cursor position.}
 \usage{
-paste_path()
+paste_path(wrap_quotes = TRUE)
+}
+\arguments{
+\item{wrap_quotes}{if TRUE, wrap in double quotes (character vector) if necessary}
 }
 \value{
 nothing
 }
 \description{
-Paste a path in the current cursor position.
-Paste a path in the current cursor position.
 All backslashes are converted to slashes, and the path is quoted if necessary.
 }
 \examples{
