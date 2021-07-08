@@ -2,16 +2,17 @@
 # pastepath
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/lgaborini/rstudio-pastepath/workflows/R-CMD-check/badge.svg)](https://github.com/lgaborini/rstudio-pastepath/actions)
 <!-- badges: end -->
 
 The goal of pastepath is to ...
 
 ## Installation
 
-You can install the released version of pastepath from [CRAN](https://CRAN.R-project.org) with:
+You can install the Addin from this GitHub:
 
 ``` r
-install.packages("pastepath")
+remotes::install_github("lgaborini/rstudio-pastepath")
 ```
 
 ## Example
