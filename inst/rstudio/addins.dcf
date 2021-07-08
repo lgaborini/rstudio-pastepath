@@ -1,0 +1,5 @@
+Name: Paste path
+Description: Paste a path as a character vector
+Binding: paste_path
+Interactive: false
+
