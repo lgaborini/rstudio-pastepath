@@ -1,11 +1,11 @@
 Package: pastepath
-Title: Paste a path in RStudio as a character vector
+Title: Paste a Path in RStudio as a Character Vector
 Version: 0.1
 Authors@R: 
     person(given = "Lorenzo",
            family = "Gaborini",
            role = c("aut", "cre"),
-           email = "lorenzo.gaborini@gmai.com")
+           email = "lorenzo.gaborini@gmail.com")
 Description: Paste a path in RStudio as a character vector.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -17,4 +17,5 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     clipr,
-    rstudioapi
+    rstudioapi,
+    withr

@@ -1,5 +1,8 @@
+# allow clipboard access while testing non-interactively
+withr::local_envvar(CLIPR_ALLOW = TRUE)
+
 write_clipboard <- function(x) {
-   clipr::write_clip(x, allow_non_interactive = TRUE)
+   clipr::write_clip(x)
    Sys.sleep(0.05)
 }
 
